@@ -26,3 +26,6 @@
 	b = branch
 	ba = branch -a
 
+[user]
+    name = tiwanari
+    email = tatsuyaw0c@gmail.com
