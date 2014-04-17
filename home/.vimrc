@@ -54,6 +54,7 @@ NeoBundle 'git://github.com/Shougo/vinarise.git' " avoids error
 if has('gui_running')
     NeoBundle "Shougo/neocomplete.vim"
     NeoBundle 'Shougo/neosnippet.vim'
+    NeoBundle "Shougo/neosnippet-snippets"
 endif
 
 " unite sources
