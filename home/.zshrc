@@ -1,7 +1,7 @@
 export PATH="/usr/local/bin:$PATH"
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=~/.zsh/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
@@ -36,12 +36,6 @@ linux*)
 
   ;;
 esac
-
-#alias -g L='| less'
-#alias -g H='| head'
-#alias -g T='| tail'
-#alias -g G='| grep'
-#alias -g GI='| grep -i'
 
 ### PROMPT ###
 PROMPT='%n@%m%# '
