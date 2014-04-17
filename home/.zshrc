@@ -23,7 +23,7 @@ darwin*)
   alias ls="ls -G"
   alias ll="ls -lG"
   alias la="ls -laG"
-
+  alias gvim="open /Applications/MacVim.app"
   ;;
 linux*)
   alias ls='ls --color'
