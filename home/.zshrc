@@ -23,7 +23,9 @@ darwin*)
   alias ls="ls -G"
   alias ll="ls -lG"
   alias la="ls -laG"
+  alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
   ;;
+  
 linux*)
   alias ls='ls --color'
   alias ll='ls -l --color'
