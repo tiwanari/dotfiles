@@ -24,6 +24,8 @@ darwin*)
   alias ll="ls -lG"
   alias la="ls -laG"
   alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
+  alias man='env LANG=C man'
+  alias jman='env LANG=ja_JP.UTF-8 man'
   ;;
   
 linux*)
