@@ -2,3 +2,9 @@
 *~
 *.swp
 *.swo
+
+# Windows
+Thumbs.db
+
+# MacOS
+.DS_Store
