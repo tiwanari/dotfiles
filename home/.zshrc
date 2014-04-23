@@ -45,7 +45,7 @@ linux*)
 esac
 
 ### PROMPT ###
-PROMPT="%{$fg[cyan]%}[%n@%m] %{$fg[green]%}%c%{$fg[yellow]%}# %{$reset_color%}"
+PROMPT="%{$fg[cyan]%}[ %n@%m ] %{$fg[green]%}%c%{$fg[magenta]%}# %{$reset_color%}"
 RPROMPT="%{$fg[red]$bg[white]%} %d %{$reset_color%}"
 setopt TRANSIENT_RPROMPT
 setopt LIST_PACKED
