@@ -1,5 +1,5 @@
 " ---------------------------
-"     .vimrc for meryngii
+"     .vimrc for tiwanari
 " ---------------------------
 
 " Initial setup "{{{
