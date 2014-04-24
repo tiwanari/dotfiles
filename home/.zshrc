@@ -18,6 +18,10 @@ setopt correct
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+setopt auto_cd
+
+setopt hist_ignore_dups
+
 case "${OSTYPE}" in
 darwin*)
   alias ls="ls -G"
@@ -46,7 +50,7 @@ linux*)
 esac
 
 ### PROMPT ###
-PROMPT='%n@%m%# '
+PROMPT="%{$fg[cyan]%}[ %n@%m ] %{$fg[green]%}%c%{$fg[magenta]%}# %{$reset_color%}"
 RPROMPT="%{$fg[red]$bg[white]%} %d %{$reset_color%}"
 setopt TRANSIENT_RPROMPT
 setopt LIST_PACKED
