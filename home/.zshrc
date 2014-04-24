@@ -40,7 +40,12 @@ linux*)
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
-
+  
+  alias ar='sudo apt-get autoremove'
+  alias aup='sudo apt-get update'
+  alias aug='sudo apt-get upgrade'
+  alias ai='sudo apt-get install '
+  alias aar='sudo add-apt-repository '
   ;;
 esac
 
