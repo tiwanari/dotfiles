@@ -471,6 +471,7 @@ nnoremap [Space]fixh   :<C-u>call ToggleOption('winfixheight')<CR>
 nnoremap o oX<C-h>
 nnoremap O OX<C-h>
 inoremap <CR> <CR>X<C-h>
+inoremap } }
 
 " :RemoveSwap : Remove all swap files.
 function! s:remove_swapfiles()
@@ -590,7 +591,7 @@ set softtabstop=4
 set shiftwidth=4
 " tabの代わりに半角スペースを挿入する
 
-set autoindent
+set smartindent
 set expandtab
 "}}}
 
