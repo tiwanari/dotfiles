@@ -69,10 +69,10 @@ elseif s:is_mac
 
 else
     "--- Linux ---
-
-    set guifont=Ricty\ 12
+    set guifont=Inconsolata\ 12
+    "set guifont=Ricty\ 12
     "set guifont=Ubuntu\ Mono\ 12
-
+    set guifontwide=Osaka\ 12
     set lines=40 columns=120
 endif
 
