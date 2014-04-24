@@ -1,6 +1,5 @@
 export PATH="/usr/local/bin:$PATH"
 
-eval "$(rbenv init -)"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh/.histfile
@@ -32,6 +31,7 @@ darwin*)
   alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
   alias man='env LANG=C man'
   alias jman='env LANG=ja_JP.UTF-8 man'
+  eval "$(rbenv init -)"
   ;;
   
 linux*)
