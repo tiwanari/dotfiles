@@ -50,7 +50,7 @@ NeoBundle "Shougo/vimshell.vim"
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/neomru.vim"
 NeoBundle "Shougo/vimfiler.vim"
-NeoBundle 'git://github.com/Shougo/vinarise.git' " avoids error
+"NeoBundle 'git://github.com/Shougo/vinarise.git' " avoids error
 if has('gui_running')
     NeoBundle "Shougo/neocomplete.vim"
     NeoBundle 'Shougo/neosnippet.vim'
