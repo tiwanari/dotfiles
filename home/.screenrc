@@ -1,0 +1,18 @@
+# Character Encoding
+defencoding utf-8
+# Escape Key: C-z
+escape ^Zz
+# Hide the startup message
+startup_message off
+# Autodetach
+autodetach on
+# Logging
+log on 
+deflog on
+logfile ~/.screen/log/%Y%m%d-%n.log
+defscrollback 1000000
+# Status Bar
+hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%= %{=b yk}%l %{= wk}%Y/%m/%d %c:%s"
+
+# For rvm
+shell -${SHELL}
