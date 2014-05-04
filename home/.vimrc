@@ -110,6 +110,7 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'basyura/twibill.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'basyura/bitly.vim'
+NeoBundle 'mattn/favstar-vim'
 
 filetype plugin on
 filetype plugin indent off
@@ -392,6 +393,31 @@ let g:airline#extensions#tabline#enabled = 1
 
 "}}}
 
+" TweetVim "{{{
+if has('gui_running')
+    " タイムライン選択用の Unite を起動する
+    nnoremap <silent> tl :Unite tweetvim<CR>
+
+    " 発言用バッファを表示する
+    nnoremap <silent> tw :<C-u>TweetVimSay<CR>
+
+    " スクリーン名のキャッシュを利用して，neocomplcache で補完する
+    if !exists('g:neocomplcache_dictionary_filetype_lists')
+      let g:neocomplcache_dictionary_filetype_lists = {}
+    endif
+    
+    " アイコンを表示(Win, Ubuntuのみ. ImageMagickが必要)
+    " let g:tweetvim_display_icon = 1
+    
+    " 1ページあたりの取得数
+    let g:tweetvim_tweet_per_page = 50
+    
+    " 補完
+    let neco_dic = g:neocomplcache_dictionary_filetype_lists
+    let neco_dic.tweetvim_say = $HOME . '/.tweetvim/screen_name'
+endif
+"}}}
+
 "}}}
 
 " Key Bindings "{{{
@@ -576,7 +602,7 @@ nmap    t [Tabpage]
 for n in range(1, 9)
   execute 'nnoremap <silent> [Tabpage]'.n  ':<C-u>tabnext'.n.'<CR>'
 endfor
-" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
+" t1 で1番左のタブ，t2 で1番左から2番目のタブにジャンプ
 
 map <silent> [Tabpage]c :tablast <bar> tabnew<CR>
 " tc 新しいタブを一番右に作る
