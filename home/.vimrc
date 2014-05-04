@@ -104,6 +104,13 @@ NeoBundle 'scrooloose/syntastic'
 " Game
 NeoBundle 'rbtnn/puyo.vim'
 
+" TweetVim
+NeoBundle 'basyura/TweetVim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'basyura/twibill.vim'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'basyura/bitly.vim'
+
 filetype plugin on
 filetype plugin indent off
 
