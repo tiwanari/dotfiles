@@ -46,6 +46,9 @@ linux*)
   alias aug='sudo apt-get upgrade'
   alias ai='sudo apt-get install '
   alias aar='sudo add-apt-repository '
+  
+  export PATH="$PATH:/home/$USER/.openmpi/bin"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/"
   ;;
 esac
 
