@@ -1,5 +1,5 @@
 export PATH="/usr/local/bin:$PATH"
-
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh/.histfile
@@ -20,6 +20,7 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 setopt auto_cd
+function chpwd() { ls }
 
 setopt hist_ignore_dups
 
