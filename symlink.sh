@@ -5,6 +5,6 @@ DOTDIR=$(cd $(dirname "$0") && pwd)/home/
 for t in `ls -a $DOTDIR`
 do
 	if [ "$t" != "." -a "$t" != ".." ]; then 
-		ln -svi $DOTDIR$t ~/$t
+		ln -svi $DOTDIR$t $HOME
 	fi
 done
