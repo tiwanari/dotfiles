@@ -29,3 +29,6 @@
 [user]
     name = tiwanari
     email = tatsuyaw0c@gmail.com
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
