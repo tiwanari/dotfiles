@@ -27,6 +27,8 @@ setopt hist_ignore_dups
 
 case "${OSTYPE}" in
 darwin*)
+  alias g='git'
+  
   alias ls="ls -G"
   alias ll="ls -lG"
   alias la="ls -laG"
@@ -38,6 +40,8 @@ darwin*)
   ;;
   
 linux*)
+  alias g='git'
+  
   alias ls='ls --color'
   alias ll='ls -l --color'
   alias la='ls -la --color'

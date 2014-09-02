@@ -738,7 +738,7 @@ set backspace=indent,eol,start
 set hidden
 
 " Clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Disable beep.
 set vb t_vb=
