@@ -56,7 +56,7 @@ linux*)
   alias ai='sudo apt-get install '
   alias aar='sudo add-apt-repository '
   
-  export PATH="$PATH:/home/$USER/maven-3.2.3/bin:/home/$USER/.openmpi/bin"
+  export PATH="$PATH:/home/$USER/tools/maven-3.2.3/bin:/home/$USER/.openmpi/bin"
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/"
   ;;
 esac
