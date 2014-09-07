@@ -112,6 +112,9 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'basyura/bitly.vim'
 NeoBundle 'mattn/favstar-vim'
 
+" Previm
+NeoBundle 'kannokanno/previm'
+
 filetype plugin on
 filetype plugin indent off
 
@@ -415,6 +418,19 @@ if has('gui_running')
     " 補完
     let neco_dic = g:neocomplcache_dictionary_filetype_lists
     let neco_dic.tweetvim_say = $HOME . '/.tweetvim/screen_name'
+endif
+"}}}
+
+" Previm "{{{
+if has('gui_running')
+    " Previewを見るブラウザを指定
+    let g:previm_open_cmd = open -a Chrome
+    
+    " Markdownと認識されるファイル拡張子の列挙
+    augroup PrevimSettings
+        autocmd!
+        autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+    augroup END
 endif
 "}}}
 
