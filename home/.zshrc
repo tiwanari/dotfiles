@@ -36,6 +36,11 @@ darwin*)
   alias man='env LANG=C man'
   alias jman='env LANG=ja_JP.UTF-8 man'
   alias p3='python3'
+  
+  export PATH="$PATH:/USERS/$USER/tools/maven-3.0.5/bin"
+  export PATH="$PATH:/Applications/Inkscape.app/Contents/Resources/bin/"
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
+#  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home"
   eval "$(rbenv init -)"
   ;;
   
@@ -56,7 +61,7 @@ linux*)
   alias ai='sudo apt-get install '
   alias aar='sudo add-apt-repository '
   
-  export PATH="$PATH:/home/$USER/tools/maven-3.2.3/bin:/home/$USER/.openmpi/bin"
+  export PATH="$PATH:/home/$USER/tools/maven-3.0.5/bin:/home/$USER/.openmpi/bin"
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/"
   ;;
 esac
