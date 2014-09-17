@@ -115,6 +115,13 @@ NeoBundle 'mattn/favstar-vim'
 " Previm
 NeoBundle 'kannokanno/previm'
 
+" Coq IDE
+NeoBundle 'jvoorhis/coq.vim'
+NeoBundleLazy 'vim-scripts/CoqIDE', {
+\ 'autoload' : {
+\   'filetypes' : 'coq'
+\ }}
+
 filetype plugin on
 filetype plugin indent off
 
@@ -388,6 +395,8 @@ let g:Align_xstrlen = 3
 " Syntastic "{{{
 let g:syntastic_cpp_compiler = 'g++-4.8'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_mode_map = { 'mode': 'active',
+  \ 'passive_filetypes': ['tex'] }
 "}}}
 
 " Airline "{{{
