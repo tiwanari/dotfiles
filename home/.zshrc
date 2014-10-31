@@ -1,5 +1,4 @@
 export PATH="/usr/local/bin:$PATH"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh/.histfile
@@ -37,6 +36,7 @@ darwin*)
   alias jman='env LANG=ja_JP.UTF-8 man'
   alias p3='python3'
   
+  export CPATH="$CPLUS_LIBRARY_PATH:/usr/local/include:/usr/include"
   export PATH="$PATH:/USERS/$USER/tools/maven-3.0.5/bin"
   export PATH="$PATH:/Applications/Inkscape.app/Contents/Resources/bin"
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
