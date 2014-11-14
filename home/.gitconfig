@@ -1,6 +1,8 @@
 [core]
 	autocrlf = false
 	editor = vim
+	precomposeunicode = true
+	quotepath = false
 
 [color]
 	ui = auto

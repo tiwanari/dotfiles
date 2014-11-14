@@ -98,3 +98,5 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+export PATH=$PATH:"/Applications/microchip/xc16/v1.23/bin"

@@ -1,3 +1,4 @@
+export PATH="/usr/local/bin:$PATH"
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh/.histfile
 HISTSIZE=1000
@@ -33,6 +34,12 @@ darwin*)
   alias man='env LANG=C man'
   alias jman='env LANG=ja_JP.UTF-8 man'
   alias p3='python3'
+  
+  export CPATH="$CPLUS_LIBRARY_PATH:/usr/local/include:/usr/include"
+  export PATH="$PATH:/USERS/$USER/tools/maven-3.0.5/bin"
+  export PATH="$PATH:/Applications/Inkscape.app/Contents/Resources/bin"
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
+#  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home"
   eval "$(rbenv init -)"
   ;;
   
@@ -105,6 +112,6 @@ fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH="$PATH:/usr/local/bin:$JAVA_HOME/bin"
+export PATH="$PATH:$JAVA_HOME/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 

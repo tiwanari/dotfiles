@@ -112,6 +112,19 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'basyura/bitly.vim'
 NeoBundle 'mattn/favstar-vim'
 
+" Previm
+NeoBundle 'kannokanno/previm'
+
+" Coq IDE
+NeoBundle 'jvoorhis/coq.vim'
+NeoBundleLazy 'vim-scripts/CoqIDE', {
+\ 'autoload' : {
+\   'filetypes' : 'coq'
+\ }}
+
+" Scala Highlights
+NeoBundle 'derekwyatt/vim-scala'
+
 filetype plugin on
 filetype plugin indent off
 
@@ -215,15 +228,16 @@ if has('gui_running')
     " Plugin key-mappings.
     imap <C-k>     <Plug>(neosnippet_expand_or_jump)
     smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    xmap <C-k>     <Plug>(neosnippet_expand_target)
 
     " SuperTab like snippets behavior.
     imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
     smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
     " For snippet_complete marker.
-    "if has('conceal')
-    "  set conceallevel=2 concealcursor=i
-    "endif
+    if has('conceal')
+      set conceallevel=2 concealcursor=i
+    endif
 
 
     " my settings below
@@ -385,6 +399,8 @@ let g:Align_xstrlen = 3
 " Syntastic "{{{
 let g:syntastic_cpp_compiler = 'g++-4.8'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_mode_map = { 'mode': 'active',
+  \ 'passive_filetypes': ['tex'] }
 "}}}
 
 " Airline "{{{
@@ -415,6 +431,19 @@ if has('gui_running')
     " 補完
     let neco_dic = g:neocomplcache_dictionary_filetype_lists
     let neco_dic.tweetvim_say = $HOME . '/.tweetvim/screen_name'
+endif
+"}}}
+
+" Previm "{{{
+if has('gui_running')
+    " Previewを見るブラウザを指定
+    let g:previm_open_cmd = open -a Chrome
+    
+    " Markdownと認識されるファイル拡張子の列挙
+    augroup PrevimSettings
+        autocmd!
+        autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+    augroup END
 endif
 "}}}
 
