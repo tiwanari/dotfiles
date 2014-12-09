@@ -122,6 +122,9 @@ NeoBundleLazy 'vim-scripts/CoqIDE', {
 \   'filetypes' : 'coq'
 \ }}
 
+" Scala Highlights
+NeoBundle 'derekwyatt/vim-scala'
+
 filetype plugin on
 filetype plugin indent off
 
