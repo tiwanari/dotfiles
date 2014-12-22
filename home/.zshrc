@@ -1,5 +1,4 @@
 export PATH="/usr/local/bin:$PATH"
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh/.histfile
 HISTSIZE=1000
@@ -44,6 +43,7 @@ darwin*)
   export CPATH="$CPLUS_LIBRARY_PATH:/usr/local/include:/usr/include"
   export PATH="$PATH:/Users/$USER/local/bin:/Users/$USER/tools/maven-3.0.5/bin"
   export PATH="$PATH:/Applications/Inkscape.app/Contents/Resources/bin"
+  export PATH="$PATH:/Users/$USER/local/bin"
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
 #  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home"
   eval "$(rbenv init -)"
@@ -66,8 +66,9 @@ linux*)
   alias ai='sudo apt-get install '
   alias aar='sudo add-apt-repository '
   
-  export PATH="$PATH:/home/$USER/tools/maven-3.0.5/bin:/home/$USER/.openmpi/bin"
+  export PATH="$PATH:/home/$USER/tools/maven-3.0.5/bin:/home/$USER/.openmpi/bin:/home/iwanari/local/git/bin"
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/"
+  export JAVA_HOME="/home/$USER/tools/jdk1.7.0_67"
   ;;
 esac
 
@@ -116,4 +117,7 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH="$PATH:$JAVA_HOME/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 

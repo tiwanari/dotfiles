@@ -85,9 +85,9 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'vim-scripts/Lucius'
 NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'jeffreyiacono/vim-colors-wombat'
-
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'ujihisa/unite-colorscheme'
-
 NeoBundle 'bling/vim-airline'
 
 " External Tools
