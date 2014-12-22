@@ -63,6 +63,9 @@ NeoBundle "osyo-manga/unite-quickfix"
 NeoBundle "tsukkee/unite-tag"
 NeoBundle "Shougo/unite-build"
 
+" ssh
+NeoBundle 'Shougo/unite-ssh'
+
 " File
 NeoBundle "sudo.vim"
 " Text
@@ -369,6 +372,11 @@ if executable('ack-grep')
     " let g:unite_source_grep_recursive_opt = ''
 endif
 
+" For quickfix
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :<C-u>cfirst<CR>
+nnoremap ]Q :<C-u>clast<CR>
 "}}}
 
 " QuickRun "{{{
@@ -867,6 +875,10 @@ set makeprg=make\ -w
 
 " Automatic reloading.
 set autoread
+
+" Spell checking.
+set spelllang+=cjk " Ignore Japanese during spell checking
+set spell
 
 " Check the external changes on WinEnter. "{{{
 augroup vimrc-checktime
