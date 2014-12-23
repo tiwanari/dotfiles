@@ -78,6 +78,10 @@ if [ -x /usr/bin/dircolors ]; then
     #alias egrep='egrep --color=auto'
 fi
 
+# git alias
+alias g='git'
+  
+
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -al'
