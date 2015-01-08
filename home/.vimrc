@@ -111,11 +111,11 @@ NeoBundle 'rbtnn/puyo.vim'
 NeoBundle 'basyura/TweetVim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'basyura/twibill.vim'
-NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'basyura/bitly.vim'
 NeoBundle 'mattn/favstar-vim'
 
 " Previm
+NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 
 " Coq IDE
@@ -444,8 +444,13 @@ endif
 
 " Previm "{{{
 if has('gui_running')
+    nnoremap [previm] <Nop>
+    nmap <Space>p [previm]
+    nnoremap <silent> [previm]o :<C-u>PrevimOpen<CR>
+    nnoremap <silent> [previm]r :call previm#refresh()<CR>
+    
     " Previewを見るブラウザを指定
-    let g:previm_open_cmd = open -a Chrome
+    let g:previm_open_cmd = ''
     
     " Markdownと認識されるファイル拡張子の列挙
     augroup PrevimSettings
