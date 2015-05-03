@@ -597,6 +597,7 @@ augroup FoldingCommentGroup
     autocmd FileType lua  setlocal commentstring=--%s
     autocmd FileType vim  setlocal commentstring=\"%s
     autocmd FileType php  setlocal commentstring=//%s
+    autocmd FileType tex  setlocal commentstring=%%s
 augroup END
 
 "}}}

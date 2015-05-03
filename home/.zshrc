@@ -30,6 +30,8 @@ setopt hist_ignore_dups
 
 case "${OSTYPE}" in
 darwin*)
+  alias -g C='| pbcopy'
+  
   alias g='git'
   
   alias ls="ls -G"
@@ -47,6 +49,7 @@ darwin*)
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
 #  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home"
   eval "$(rbenv init -)"
+  precmd () { print -Pn "\e]2;%n@%M | %~\a" } # title bar prompt
   ;;
   
 linux*)
