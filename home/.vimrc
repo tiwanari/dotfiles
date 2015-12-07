@@ -670,6 +670,17 @@ set smartindent
 set expandtab
 "}}}
 
+" Spaces "{{{
+autocmd BufWritePre * :%s/\s\+$//ge
+autocmd BufWritePre * call s:remove_line_in_last_line()
+
+function! s:remove_line_in_last_line()
+  if getline('$') == ""
+     $delete _
+  endif
+endfunction
+"}}}
+
 " Tag "{{{
 
 if has('path_extra')
