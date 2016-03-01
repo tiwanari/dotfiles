@@ -31,44 +31,55 @@ setopt hist_ignore_dups
 case "${OSTYPE}" in
 darwin*)
   alias -g C='| pbcopy'
-  
+
   alias g='git'
-  
-  alias ls="ls -G"
-  alias ll="ls -lG"
-  alias la="ls -laG"
+
+  alias ls="ls -Gh"
+  alias ll="ls -lGh"
+  alias la="ls -laGh"
   alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
   alias man='env LANG=C man'
   alias jman='env LANG=ja_JP.UTF-8 man'
   alias p3='python3'
-  
+  alias svndel="svn status | grep '^!' | awk '{print \$2}' | xargs svn delete"
+
+  alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+
+  alias neologd="mecab -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd"
+  alias jumandic="mecab -d /usr/local/Cellar/mecab-jumandic/5.1-20070304/lib/mecab/dic/jumandic"
+  alias uni="mecab -d /usr/local/Cellar/mecab-unidic/2.1.2/lib/mecab/dic/unidic"
+  alias ipa="mecab -d /usr/local/Cellar/mecab-ipadic/2.7.0-20070801/lib/mecab/dic/ipadic.old"
+
   export CPATH="$CPLUS_LIBRARY_PATH:/usr/local/include:/usr/include"
+  export ANDROID_HOME="~/Library/Android/sdk"
+  export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
   export PATH="$PATH:/Users/$USER/local/bin:/Users/$USER/tools/maven-3.0.5/bin"
   export PATH="$PATH:/Applications/Inkscape.app/Contents/Resources/bin"
   export PATH="$PATH:/Users/$USER/local/bin"
-  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
-#  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home"
+  export PATH="$PATH:/usr/local/opt/gettext/bin"
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home"
+  # export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
   eval "$(rbenv init -)"
   precmd () { print -Pn "\e]2;%n@%M | %~\a" } # title bar prompt
   ;;
-  
+
 linux*)
   alias g='git'
-  
-  alias ls='ls --color'
-  alias ll='ls -l --color'
-  alias la='ls -la --color'
+
+  alias ls='ls -h --color'
+  alias ll='ls -lh --color'
+  alias la='ls -lah --color'
 
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
-  
+
   alias ar='sudo apt-get autoremove'
   alias aup='sudo apt-get update'
   alias aug='sudo apt-get upgrade'
   alias ai='sudo apt-get install '
   alias aar='sudo add-apt-repository '
-  
+
   export PATH="$PATH:/home/$USER/tools/maven-3.0.5/bin:/home/$USER/.openmpi/bin:/home/iwanari/local/git/bin"
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/"
   export JAVA_HOME="/home/$USER/tools/jdk1.7.0_67"
@@ -123,4 +134,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$JAVA_HOME/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
-
+export EDITOR=vim
