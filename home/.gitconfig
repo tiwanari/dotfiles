@@ -27,6 +27,7 @@
 	lo = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
 	b = branch
 	ba = branch -a
+	la = log --oneline --decorate --graph --branches --tags --remotes
 
 [user]
     name = tiwanari
