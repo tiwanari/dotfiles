@@ -48,7 +48,7 @@ NeoBundle "Shougo/vimproc.vim", {
 \ }
 NeoBundle "Shougo/vimshell.vim"
 NeoBundle "Shougo/unite.vim"
-NeoBundle "Shougo/neomru.vim"
+" NeoBundle "Shougo/neomru.vim"
 NeoBundle "Shougo/vimfiler.vim"
 "NeoBundle 'git://github.com/Shougo/vinarise.git' " avoids error
 if has('gui_running')
@@ -429,13 +429,13 @@ if has('gui_running')
     if !exists('g:neocomplcache_dictionary_filetype_lists')
       let g:neocomplcache_dictionary_filetype_lists = {}
     endif
-    
+
     " アイコンを表示(Win, Ubuntuのみ. ImageMagickが必要)
     " let g:tweetvim_display_icon = 1
-    
+
     " 1ページあたりの取得数
     let g:tweetvim_tweet_per_page = 50
-    
+
     " 補完
     let neco_dic = g:neocomplcache_dictionary_filetype_lists
     let neco_dic.tweetvim_say = $HOME . '/.tweetvim/screen_name'
@@ -448,10 +448,10 @@ if has('gui_running')
     nmap <Space>p [previm]
     nnoremap <silent> [previm]o :<C-u>PrevimOpen<CR>
     nnoremap <silent> [previm]r :call previm#refresh()<CR>
-    
+
     " Previewを見るブラウザを指定
     let g:previm_open_cmd = ''
-    
+
     " Markdownと認識されるファイル拡張子の列挙
     augroup PrevimSettings
         autocmd!
@@ -792,6 +792,7 @@ set backspace=indent,eol,start
 set hidden
 
 " Clipboard
+" set clipboard=unnamedplus
 set clipboard=unnamed
 
 " Disable beep.

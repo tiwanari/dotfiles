@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+set -o vi
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -49,11 +51,16 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
-    PS1='\[\033[0;36m\][ \u@\h ] \[\033[0;32m\]\W\[\033[0;35m\]\$ \[\e[00m\]'
+    #PS1='\[\033[0;36m\][ \u@\h ] \[\033[0;32m\]\W\[\033[0;35m\]\$ \[\e[00m\]'
+    PS1="\[\033[0;36m\][ \u@\h ] \[\033[0;32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\[\033[0;35m\] $ \[\e[00m\]"
 fi
 unset color_prompt force_color_prompt
 
@@ -80,12 +87,12 @@ fi
 
 # git alias
 alias g='git'
-  
+
 
 # some more ls aliases
-alias ll='ls -l'
-alias la='ls -al'
-alias l='ls -CF'
+alias ll='ls -l --color'
+alias la='ls -al --color'
+alias l='ls -CF --color'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
