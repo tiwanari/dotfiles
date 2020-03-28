@@ -1,12 +1,42 @@
 "########################
 "#       init.vim       #
 "########################
-set encoding=utf-8
-scriptencoding utf8
-
 if &compatible
   set nocompatible
 endif
+
+" Encoding
+scriptencoding utf8
+set encoding=utf-8
+set fileencoding=utf-8
+
+" Basic settings
+set noswapfile      "
+set nobackup        "
+set autoread        " autoreload when the file is modified
+
+" Editor
+set number          " show line numbers
+set cursorline      " highlight the current line
+set expandtab       " use spaces as a tab
+set tabstop=4 softtabstop=4 shiftwidth=4 " tab width
+set smartindent     "
+set smarttab        "
+set showmatch       " show the paring bracket
+set nowrap          " stop wrapping lines
+set laststatus=2    " always show the status bar
+filetype plugin indent on   " enable filetype specific indents
+syntax enable               " syntax highlight
+inoremap <silent> jj <ESC>:<C-u>w<CR>   " double 'j' to go back to normal mode and save the file
+
+" Search
+set ignorecase      "
+set smartcase       " don't ignore case when searching for a word with a upper case
+set incsearch       " incremental search
+set wrapscan        " go to the top once reaching the end
+set hlsearch        " highlight hits
+nmap <Esc><Esc> :nohlsearch<CR><Esc>    " double escs to disable highlighting hits
+
 
 
 "########################
@@ -31,6 +61,3 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-
-filetype plugin indent on
-syntax enable
