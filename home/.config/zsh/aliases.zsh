@@ -26,7 +26,7 @@ case "$OSTYPE" in
     alias ll="ls -lGh"
     alias la="ls -laGh"
 
-    alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
+    alias gvim='env LANG=ja_JP.UTF-8 vimr "$@"'
 
     alias man='env LANG=C man'
     alias jman='env LANG=ja_JP.UTF-8 man'
