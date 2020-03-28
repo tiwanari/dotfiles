@@ -3,12 +3,16 @@
 #######################
 alias g='git'
 
+alias vi='nvim'
+alias vim='nvim'
+
 # for competitive programming
 alias jcm='javac Main.java'
 alias jrm='java Main'
 alias runall='for f in `ls in_*`; do jrm < $f; done'
 alias catall='cat out_*'
 alias cpmain='cat main.java | C'
+
 
 
 #######################
@@ -48,4 +52,3 @@ case "$OSTYPE" in
   *)
   ;;
 esac
-

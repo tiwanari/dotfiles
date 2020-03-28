@@ -3,8 +3,6 @@
 #######################
 bindkey -v
 
-bindkey '^h' zaw-history
-
 
 #######################
 #     OS Specific     #
@@ -19,4 +17,3 @@ case "$OSTYPE" in
   *)
   ;;
 esac
-
