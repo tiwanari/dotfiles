@@ -13,5 +13,7 @@ Thumbs.db
 # IntelliJ
 .idea
 
-## zsh
+# zsh
 histfile
+.zcompdump
+history
