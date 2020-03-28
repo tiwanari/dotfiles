@@ -14,17 +14,21 @@ set fileencoding=utf-8
 set noswapfile      "
 set nobackup        "
 set autoread        " autoreload when the file is modified
+colorscheme desert  "
 
 " Editor
-set number          " show line numbers
-set cursorline      " highlight the current line
-set expandtab       " use spaces as a tab
+set number              " show line numbers
+set cursorline          " highlight the current line
+set expandtab           " use spaces as a tab
 set tabstop=4 softtabstop=4 shiftwidth=4 " tab width
-set smartindent     "
-set smarttab        "
-set showmatch       " show the paring bracket
-set nowrap          " stop wrapping lines
-set laststatus=2    " always show the status bar
+set smartindent         "
+set smarttab            "
+set showmatch           " show the paring bracket
+set nowrap              " stop wrapping lines
+set laststatus=2        " always show the status bar
+set clipboard=unnamed   " enable copy to clipboard
+set list                        " show invisible characters
+set listchars=tab:▸\ ,eol:¬     "
 inoremap <silent> jj <ESC>:<C-u>w<CR>   " double 'j' to go back to normal mode and save the file
 
 " Search
