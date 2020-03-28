@@ -31,6 +31,7 @@ set laststatus=2        " always show the status bar
 set clipboard=unnamed   " enable copy to clipboard
 set list                        " show invisible characters
 set listchars=tab:▸\ ,eol:¬     "
+autocmd BufWritePre * :%s/\s\+$//e  " strip trailing spaces
 
 " Search
 set ignorecase      "
