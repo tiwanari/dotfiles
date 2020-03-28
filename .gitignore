@@ -12,3 +12,6 @@ Thumbs.db
 
 # IntelliJ
 .idea
+
+## zsh
+histfile
