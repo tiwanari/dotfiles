@@ -7,18 +7,20 @@ if &compatible
   set nocompatible
 endif
 
-" Encoding
+" Encoding {{{
 scriptencoding utf8
 set encoding=utf-8
 set fileencoding=utf-8
+" }}}
 
-" Basic settings
+" Basic settings {{{
 set noswapfile      "
 set nobackup        "
 set autoread        " autoreload when the file is modified
 colorscheme desert  "
+" }}}
 
-" Editor
+" Editor {{{
 set number              " show line numbers
 set cursorline          " highlight the current line
 set expandtab           " use spaces as a tab
@@ -32,13 +34,20 @@ set clipboard=unnamed   " enable copy to clipboard
 set list                        " show invisible characters
 set listchars=tab:▸\ ,eol:¬     "
 autocmd BufWritePre * :%s/\s\+$//e  " strip trailing spaces
+" }}}
 
-" Search
+" Search {{{
 set ignorecase      "
 set smartcase       " don't ignore case when searching for a word with a upper case
 set incsearch       " incremental search
 set wrapscan        " go to the top once reaching the end
 set hlsearch        " highlight hits
+" }}}
+
+" Folding {{{
+set foldenable
+set foldmethod=marker
+" }}}
 
 
 "########################
