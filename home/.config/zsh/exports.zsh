@@ -17,7 +17,11 @@ eval "$(rbenv init -)"
 #######################
 case "$OSTYPE" in
   darwin*)
-    export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/"
+    # export JAVA_HOME=`/usr/libexec/java_home -v 10`
+    # export JAVA_HOME=`/usr/libexec/java_home -v 9`
+    export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+    # export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+    # export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
     export PATH="$PATH:$JAVA_HOME/bin"
   ;;
 
