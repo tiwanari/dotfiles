@@ -25,8 +25,6 @@ set smarttab        "
 set showmatch       " show the paring bracket
 set nowrap          " stop wrapping lines
 set laststatus=2    " always show the status bar
-filetype plugin indent on   " enable filetype specific indents
-syntax enable               " syntax highlight
 inoremap <silent> jj <ESC>:<C-u>w<CR>   " double 'j' to go back to normal mode and save the file
 
 " Search
@@ -61,3 +59,6 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+filetype plugin indent on   " enable filetype specific indents
+syntax enable               " syntax highlight
