@@ -37,7 +37,7 @@ set smartcase       " don't ignore case when searching for a word with a upper c
 set incsearch       " incremental search
 set wrapscan        " go to the top once reaching the end
 set hlsearch        " highlight hits
-nmap <Esc><Esc> :nohlsearch<CR><Esc>    " double escs to disable highlighting hits
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>   " redraw and disable highlighting hits
 
 
 
