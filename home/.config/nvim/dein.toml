@@ -1,0 +1,12 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+    source ~/.config/nvim/plugins/deoplete.vim
+'''
+
+# syntax highlighting for toml
+[[plugin]]
+repo = 'cespare/vim-toml'
