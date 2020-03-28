@@ -2,6 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Set user variables based on XDG Base Directory Specification.
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
 set -o vi
 
 # If not running interactively, don't do anything
@@ -58,8 +63,6 @@ parse_git_branch() {
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
-    #PS1='\[\033[0;36m\][ \u@\h ] \[\033[0;32m\]\W\[\033[0;35m\]\$ \[\e[00m\]'
     PS1="\[\033[0;36m\][ \u@\h ] \[\033[0;32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\[\033[0;35m\] $ \[\e[00m\]"
 fi
 unset color_prompt force_color_prompt
@@ -77,28 +80,18 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
-
-# git alias
-alias g='git'
-
-
-# some more ls aliases
-alias ll='ls -l --color'
-alias la='ls -al --color'
-alias l='ls -CF --color'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -109,5 +102,3 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-export PATH=$PATH:"/Applications/microchip/xc16/v1.23/bin"
