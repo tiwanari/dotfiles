@@ -2,5 +2,12 @@
 repo = 'Shougo/dein.vim'
 
 # syntax highlighting for toml
-[[plugin]]
+[[plugins]]
 repo = 'cespare/vim-toml'
+
+# filer
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    source ~/.config/nvim/plugins/nerdtree.vim
+'''
