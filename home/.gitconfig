@@ -30,8 +30,9 @@
 	la = log --oneline --decorate --graph --branches --tags --remotes
 
 [user]
-    name = tiwanari
-    email = tatsuyaw0c@gmail.com
+	name = tiwanari
+	email = tatsuyaw0c@gmail.com
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
