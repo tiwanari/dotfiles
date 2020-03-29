@@ -36,12 +36,12 @@ HISTFILE=$ZDOTDIR/history
 HISTSIZE=10000
 SAVEHIST=10000
 
-setopt hist_ignore_all_dups     # Remove the old one
-setopt hist_ignore_space        # Ignore commands starting with spaces
+setopt hist_ignore_all_dups     # remove the old one
+setopt hist_ignore_space        # ignore commands starting with spaces
 setopt hist_verify              # edit before executing a command from history
 setopt hist_reduce_blanks       # save commands after removing redundant spaces
-setopt hist_save_no_dups        # Ignore same commands
-setopt hist_no_store            # Ignore history command itself
+setopt hist_save_no_dups        # ignore same commands
+setopt hist_no_store            # ignore history command itself
 setopt hist_expand              # automatically expand history
 setopt inc_append_history       # search history incrementally
 
