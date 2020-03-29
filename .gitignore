@@ -16,3 +16,6 @@ Thumbs.db
 # zsh
 .zcompdump
 history
+
+# config store
+configstore/
