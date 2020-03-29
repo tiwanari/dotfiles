@@ -1,4 +1,4 @@
-nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nnoremap <silent><Space>f :<C-u>Defx -split=vertical -winwidth=40 -search=`expand('%:p')` -direction=topleft -search=`expand('%:p')`<CR>
 
 call defx#custom#column('icon', {
       \ 'directory_icon': '▸',
@@ -18,14 +18,14 @@ call defx#custom#column('mark', {
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
-    nnoremap <silent><buffer><expr> <CR> defx#do_action('open')
+    nnoremap <silent><buffer><expr> <CR> defx#is_directory() ? defx#do_action('open_directory') : defx#do_action('multi', ['drop'])
     nnoremap <silent><buffer><expr> c defx#do_action('copy')
     nnoremap <silent><buffer><expr> m defx#do_action('move')
     nnoremap <silent><buffer><expr> p defx#do_action('paste')
-    nnoremap <silent><buffer><expr> l defx#do_action('open')
+    nnoremap <silent><buffer><expr> l defx#is_directory() ? defx#do_action('open_directory') : defx#do_action('multi', ['drop'])
     nnoremap <silent><buffer><expr> E defx#do_action('open', 'vsplit')
     nnoremap <silent><buffer><expr> P defx#do_action('open', 'pedit')
-    nnoremap <silent><buffer><expr> o defx#do_action('open_or_close_tree')
+    nnoremap <silent><buffer><expr> o defx#is_directory() ? defx#do_action('open_directory') : defx#do_action('multi', ['drop'])
     nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
     nnoremap <silent><buffer><expr> N defx#do_action('new_file')
     nnoremap <silent><buffer><expr> M defx#do_action('new_multiple_files')

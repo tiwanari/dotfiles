@@ -21,17 +21,16 @@ repo = 'airblade/vim-gitgutter'
 ########################
 #     defx plugins     #
 ########################
-# git status indicator
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
-hook_add = '''
-    source ~/.config/nvim/plugins/defx-git.vim
-'''
-
-# filer
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 depends = ['defx-git']
 hook_add = '''
     source ~/.config/nvim/plugins/defx.vim
+'''
+
+# git status indicator
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
+hook_add = '''
+    source ~/.config/nvim/plugins/defx-git.vim
 '''
