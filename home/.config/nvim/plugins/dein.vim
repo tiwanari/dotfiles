@@ -1,6 +1,3 @@
-"########################
-"#       dein.vim       #
-"########################
 let g:vim_home = get(g:, 'vim_home', expand('~/.config/nvim'))
 let g:dein_cache = get(g:, 'dein_cache', expand('~/.cache/dein'))
 

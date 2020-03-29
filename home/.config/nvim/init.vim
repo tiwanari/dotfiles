@@ -53,7 +53,7 @@ set foldmethod=marker
 "########################
 "#       dein.vim       #
 "########################
-exec 'source' g:vim_home.'/dein.vim'
+exec 'source' g:vim_home.'/plugins/dein.vim'
 
 filetype plugin indent on   " enable filetype specific indents
 syntax enable               " syntax highlight
