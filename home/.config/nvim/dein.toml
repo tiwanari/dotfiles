@@ -1,17 +1,37 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+
+########################
+#   syntax highlight   #
+########################
 # syntax highlighting for toml
 [[plugins]]
 repo = 'cespare/vim-toml'
 
-# filer
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-    source ~/.config/nvim/plugins/nerdtree.vim
-'''
 
+########################
+#        Editor        #
+########################
 # git support
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+
+########################
+#     defx plugins     #
+########################
+# git status indicator
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
+hook_add = '''
+    source ~/.config/nvim/plugins/defx-git.vim
+'''
+
+# filer
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+depends = ['defx-git']
+hook_add = '''
+    source ~/.config/nvim/plugins/defx.vim
+'''
