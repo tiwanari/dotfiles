@@ -9,6 +9,10 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'cespare/vim-toml'
 
+# multiple languages support
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
 
 ########################
 #        editor        #
@@ -16,6 +20,10 @@ repo = 'cespare/vim-toml'
 # git support
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+# linter
+[[plugins]]
+repo = 'dense-analysis/ale'
 
 
 ########################
