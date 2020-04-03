@@ -11,6 +11,7 @@ endif
 scriptencoding utf8
 set encoding=utf-8
 set fileencoding=utf-8
+lang en_US.UTF-8
 " }}}
 
 " Basic settings {{{
