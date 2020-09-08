@@ -1,6 +1,6 @@
 [core]
 	autocrlf = false
-	editor = vim
+	editor = nvim
 	precomposeunicode = true
 	quotepath = false
 
@@ -33,6 +33,21 @@
 	name = tiwanari
 	email = tatsuyaw0c@gmail.com
 
+[diff]
+	tool = nvimdiff
+
+[difftool "nvimdiff"]
+	cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
+
+[mergetool "nvimdiff"]
+	cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+
+[pull]
+	ff = only
+
+[grep]
+	lineNumber = true
