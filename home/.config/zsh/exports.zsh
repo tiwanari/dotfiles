@@ -23,6 +23,7 @@ case "$OSTYPE" in
     # export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
     # export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
     export PATH="$PATH:$JAVA_HOME/bin"
+    export PATH=/usr/local/opt/openjdk/bin:$PATH
   ;;
 
   linux*)
