@@ -2,6 +2,7 @@
 #       Common        #
 #######################
 alias g='git'
+alias gclean='git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d'
 
 alias vi='nvim'
 alias vim='nvim'
