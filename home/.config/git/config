@@ -3,6 +3,7 @@
 	editor = nvim
 	precomposeunicode = true
 	quotepath = false
+	ignorecase = false
 
 [color]
 	ui = auto
@@ -25,22 +26,14 @@
 	l = log
 	lg = log --graph
 	lo = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
+	la = log --oneline --decorate --graph --branches --tags --remotes
 	b = branch
 	ba = branch -a
-	la = log --oneline --decorate --graph --branches --tags --remotes
 
 [user]
 	name = tiwanari
 	email = tatsuyaw0c@gmail.com
 
-[diff]
-	tool = nvimdiff
-
-[difftool "nvimdiff"]
-	cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
-
-[mergetool "nvimdiff"]
-	cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
 
 [filter "media"]
 	clean = git-media-clean %f
@@ -51,3 +44,14 @@
 
 [grep]
 	lineNumber = true
+
+[diff]
+	tool = nvimdiff
+
+[difftool "nvimdiff"]
+	cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
+
+[mergetool "nvimdiff"]
+	cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
+[hub]
+	protocol = https
