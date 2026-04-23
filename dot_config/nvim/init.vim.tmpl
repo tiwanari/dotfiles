@@ -1,3 +1,4 @@
+{{- /* chezmoi:template:left-delimiter=[[ right-delimiter=]] */ -}}
 "########################
 "#       init.vim       #
 "########################
@@ -69,10 +70,10 @@ exec 'source' g:vim_home.'/bindings.vim'
 "#     Dein bindings     #
 "########################
 " Set Dein base path (required)
-let s:dein_base = '/Users/tatsuyaiwanari/.cache/dein'
+let s:dein_base = '[[ .chezmoi.homeDir ]]/.cache/dein'
 
 " Set Dein source path (required)
-let s:dein_src = '/Users/tatsuyaiwanari/.cache/dein/repos/github.com/Shougo/dein.vim'
+let s:dein_src = '[[ .chezmoi.homeDir ]]/.cache/dein/repos/github.com/Shougo/dein.vim'
 
 " Set Dein runtime path (required)
 execute 'set runtimepath+=' . s:dein_src
