@@ -14,8 +14,15 @@ alias runall='for f in `ls in_*`; do jrm < $f; done'
 alias catall='cat out_*'
 alias cpmain='cat main.java | C'
 
-
-
+# for LLM
+alias ccusage='npx ccusage@latest'
+function cc() {
+  claude --permission-mode auto "$@"
+}
+function ccd() {
+  claude --dangerously-skip-permissions "$@"
+}
+#
 #######################
 #     OS Specific     #
 #######################
