@@ -17,7 +17,7 @@ alias cpmain='cat main.java | C'
 # for LLM
 alias ccusage='npx ccusage@latest'
 function cc() {
-  claude --permission-mode auto "$@"
+  claude "$@"
 }
 function ccd() {
   claude --dangerously-skip-permissions "$@"
