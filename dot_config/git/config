@@ -5,11 +5,21 @@
 	quotepath = false
 	ignorecase = false
 
-[color]
-	ui = auto
+[init]
+	defaultBranch = main
 
 [push]
 	default = current
+	autoSetupRemote = true
+
+[pull]
+	ff = only
+
+[fetch]
+	prune = true
+
+[merge]
+	conflictStyle = zdiff3
 
 [alias]
 	a = add
@@ -18,7 +28,7 @@
 	d = diff
 	di = diff
 	dh = diff HEAD
-	f = fetch --prune
+	f = fetch
 	ls = ls-files -t
 	cm = commit
 	cmm = commit -am
@@ -34,14 +44,6 @@
 	name = tiwanari
 	email = tatsuyaw0c@gmail.com
 
-
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-
-[pull]
-	ff = only
-
 [grep]
 	lineNumber = true
 
@@ -53,5 +55,3 @@
 
 [mergetool "nvimdiff"]
 	cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
-[hub]
-	protocol = https
