@@ -2,17 +2,10 @@
 #       Common        #
 #######################
 alias g='git'
-alias gclean='git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d'
+alias gclean='git branch --merged | grep -Ev "(^\*|main|master|develop)" | xargs git branch -d'
 
 alias vi='nvim'
 alias vim='nvim'
-
-# for competitive programming
-alias jcm='javac Main.java'
-alias jrm='java Main'
-alias runall='for f in `ls in_*`; do jrm < $f; done'
-alias catall='cat out_*'
-alias cpmain='cat main.java | C'
 
 # for LLM
 alias ccusage='npx ccusage@latest'
@@ -39,8 +32,8 @@ case "$OSTYPE" in
     alias la='ls -lah --color'
 
     alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    alias fgrep='grep -F --color=auto'
+    alias egrep='grep -E --color=auto'
 
     # Assuming Ubuntu
     alias ar='sudo apt-get autoremove'
