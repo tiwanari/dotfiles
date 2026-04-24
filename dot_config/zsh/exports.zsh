@@ -3,6 +3,11 @@
 #######################
 export EDITOR=nvim
 
+# Homebrew
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 export PATH=/usr/local/bin:$PATH
 
 export PATH=/Library/TeX/texbin:$PATH
