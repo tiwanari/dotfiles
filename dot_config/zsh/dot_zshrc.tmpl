@@ -1,8 +1,9 @@
+source ~/.zprofile
+
 ###############################
 #       Prompt Settings       #
 ###############################
 autoload -U promptinit; promptinit
-prompt pure
 
 
 ###############################
@@ -63,5 +64,8 @@ setopt auto_cd
 function chpwd() { ls }
 
 autoload -Uz colors; colors # colors
-
-
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=({{ .chezmoi.homeDir }}/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
