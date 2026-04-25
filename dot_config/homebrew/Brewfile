@@ -1,5 +1,4 @@
 # Taps
-tap "hashicorp/tap"
 tap "kayac/tap"
 
 # CLI tools
@@ -25,7 +24,6 @@ brew "uv"
 
 # Work-specific CLI tools
 brew "editorconfig-checker"
-brew "hashicorp/tap/terraform"
 brew "kayac/tap/ecspresso"
 brew "tfenv"
 
