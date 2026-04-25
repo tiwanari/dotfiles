@@ -31,8 +31,10 @@ chezmoi のソースディレクトリ構造。`dot_` プレフィックスが `
 - `dot_zshenv` → `~/.zshenv` — XDG Base Directory 設定、ZDOTDIR 指定
 - `dot_config/zsh/` → `~/.config/zsh/` — zsh のメイン設定（exports, aliases, completions, keybindings に分割）
 - `dot_config/git/config` → `~/.config/git/config` — グローバル git 設定
+- `dot_config/homebrew/Brewfile` → `~/.config/homebrew/Brewfile` — Homebrew パッケージの宣言的管理
 - `dot_config/nvim/` → `~/.config/nvim/` — Neovim 設定（dein.vim でプラグイン管理）
 - `dot_bash*` → bash 設定（レガシー / Linux 用）
+- `run_onchange_after_install-packages-darwin.sh.tmpl` — Brewfile 変更時に `brew bundle install` を自動実行（macOS のみ）
 
 ### テンプレート
 

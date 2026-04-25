@@ -20,6 +20,20 @@ chezmoi init --apply tiwanari
 | Neovim | `.config/nvim/{init.vim, bindings, dein, plugins/}` |
 | Zed | `.config/zed/settings.json` |
 | IdeaVim | `.config/ideavim/ideavimrc` |
+| Homebrew | `.config/homebrew/Brewfile` |
+
+## Homebrew パッケージ管理
+
+`Brewfile` でパッケージを宣言的に管理。`chezmoi apply` 時に Brewfile の変更を検知して `brew bundle install` が自動実行される。
+
+```sh
+# パッケージを追加・削除
+chezmoi edit ~/.config/homebrew/Brewfile
+chezmoi apply
+
+# 現在の Brewfile で不足しているパッケージを確認
+brew bundle check --verbose --file=~/.config/homebrew/Brewfile
+```
 
 ## よく使うコマンド
 
