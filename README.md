@@ -49,6 +49,15 @@ git clone https://github.com/Shougo/dein.vim ~/.cache/dein/repos/github.com/Shou
 
 初回起動時にプラグインが自動インストールされる。
 
+### Zed（extensions）
+
+settings.json は chezmoi で管理されるが、extensions は手動インストールが必要:
+
+- **テーマ**: material-dark, material-icon-theme
+- **言語**: git-firefly, html, latex, log, make, mermaid, toml
+
+Zed の Extensions パネル（`cmd+shift+x`）から検索してインストールする。
+
 ## よく使うコマンド
 
 ```sh
