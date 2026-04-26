@@ -35,6 +35,20 @@ chezmoi apply
 brew bundle check --verbose --file=~/.config/homebrew/Brewfile
 ```
 
+## セットアップ後の追加手順
+
+ほとんどのツールは `chezmoi apply` だけで設定が反映されるが、以下は追加手順が必要。
+
+### Neovim（dein.vim）
+
+プラグインマネージャ dein.vim 本体のインストールが必要:
+
+```sh
+git clone https://github.com/Shougo/dein.vim ~/.cache/dein/repos/github.com/Shougo/dein.vim
+```
+
+初回起動時にプラグインが自動インストールされる。
+
 ## よく使うコマンド
 
 ```sh
